@@ -1,0 +1,25 @@
+
+
+body {
+    background-color: rgb(220, 53, 69, 0.72) !important;
+}
+
+.logo-span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.navbar .nav-link {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 30px;
+    color: #ffffff !important;
+}
+
+.title {
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
