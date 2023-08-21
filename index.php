@@ -14,22 +14,43 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-
-       
-
                 <!-----HEADER --->
         <?php include "./include/header.php";?>
 
+    <form action="/quiz_questions.php" method="post"> 
         <div class="container">
-            <div class="title">
-                <h1 style="color: white;">Hello World</h1>
-            </div> 
+
+            <div class="row align-items-center">
+
+                <div class="col-sm-6">
+                    <div class="dropdown">
+                        <label for="quiz">Choose a quiz:</label>
+                        <select name="quiz" id="quiz">
+                            <option value="music">Music</option>
+                            <option value="geography">Geography</option>
+                            <option value="random">Random</option>
+                        </select>
+                    </div>
+                </div>
 
 
-    
-                        
+                <div class="col-sm-6">
+                    <div class="dropdown">
+                        <label for="questions">Number of questions:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="15">
+                    </div> 
+                </div>
+            </div>
 
-            
 
+
+            <div class="container d-flex justify-content-center row btn-container">
+                <button type="submit" 
+                class="button btn btn-success">START</button>
+            </div>
+       
+
+        </div> 
+    </form>
 </body>
 </html>

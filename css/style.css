@@ -6,13 +6,13 @@ body {
 
 .logo-span {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
+    font-size: 50px;
     color: #ffffff;
 }
 
 .navbar .nav-link {
     font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 30px;
+    font-size: 50px;
     color: #ffffff !important;
 }
 
@@ -23,3 +23,74 @@ body {
 .logo {
     margin-bottom: 15px;
 }
+
+.dropdown {
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: #ffffff;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .button {
+    bottom: 0px;
+    font-family:'Bebas Neue', sans-serif !important;
+    font-size: 30px !important;
+    width: 100px !important;
+    background-color: #FF9900 !important;
+  }
+
+  .row {
+    font-size: 30px;
+  }
+
+  .question-title {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: #ffffff;
+    text-align: center;
+    background-color: #FF9900;
+    max-width: fit-content;
+    margin-bottom: 5rem;
+
+  }
+
+
+.page-header{
+    margin-bottom: 50px !important;
+}
+
+.btn-container{
+    margin-top: 50px !important;
+}
+
+.question-img{
+    max-width: 300px;
+    margin-bottom: 5rem;
+}
+
+.answer-checkbox {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+answer-margin{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* [type="checkbox"]:checked + label {
+    background: grey;
+     }
+*/

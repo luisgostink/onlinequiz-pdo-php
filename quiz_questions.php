@@ -17,14 +17,61 @@
 
         <?php 
 
-        // <-----HEADER --->
+        // <----- HEADER --->
         include "./include/header.php";
 
         ?>
 
-                        
+        <!----- QUESTION TEMPLATE --->
 
-            
+        <div class="row question">
+
+            <div class="container">
+
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <img class="question-img" src="/img/harmonicalogo_1.png" alt="Harmonica">    
+                    <h1 class="question-title">Question Title?</h1>
+                </div>
+
+
+                <div class="container d-flex justify-content-center">
+
+                    <div class="col-sm-6">
+                        <label class="d-flex answer-checkbox"><span class="answer-margin">[A]</span>
+                        <input type="checkbox" id="answer3" name="answer3" value="id" hidden>
+                        <span>ExAEWFK3QNRGNV</span></label><br>
+                            
+                        <label class="answer-checkbox">
+                        <input type="checkbox" id="answer4" name="answer4" value="id">
+                        B</label><br>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <label class="answer-checkbox">
+                        <input type="checkbox" id="answer3" name="answer3" value="id">
+                        C</label><br>
+                            
+                        <label class="answer-checkbox">
+                        <input type="checkbox" id="answer4" name="answer4" value="id">
+                        D</label><br>
+
+                    </div>
+                </div>      
+    
+                <div class="container d-flex justify-content-center row btn-container">
+                            <button type="submit" 
+                            class="button btn btn-success">PREVIOUS</button>
+                </div>
+
+                <div class="container d-flex justify-content-center row btn-container">
+                            <button type="submit" 
+                            class="button btn btn-success">NEXT</button>
+                </div>
+                
+            </div>
+        </div>
 
 </body>
 </html>
