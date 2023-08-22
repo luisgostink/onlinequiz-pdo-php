@@ -1,0 +1,90 @@
+questions_2 with answer_2 column added. 
+
+INSERT INTO questions (answer_2) VALUES
+(1, 'Mouth Organ'),
+(2, 'Brass Instruments'),
+(3, 'Wolfgang Amadeus Mozart'),
+(4, '12 reeds'),
+(5, 'Fender'),
+(6, 'Right hand'),
+(7, 'Warping'),
+(8, 'Whammy bar'),
+(9, 'Chordal playing'),
+(10, 'Elvis Presley'),
+(11, 'Sound hole'),
+(12, 'Classical music'),
+(13, 'Cross harp'),
+(14, 'Bass harmonica has a lower pitch range.'),
+(15, 'Changing the key')
+ON DUPLICATE KEY UPDATE
+answer_2 = VALUES (answer_2);
+
+questions_2 with answer_2 column added. 
+
+INSERT INTO questions (answer_3) VALUES
+(1, 'Trumpet'),
+(2, 'Percussion Instruments'),
+(3, 'Christian Friedrich Ludwig Buschmann'),
+(4, '20 reeds'),
+(5, 'Hohner'),
+(6, 'Both hands'),
+(7, 'Bending'),
+(8, 'Bendable reeds'),
+(9, 'Harmonic playing'),
+(10, 'Bob Dylan'),
+(11, 'Air outlet'),
+(12, 'Folk music'),
+(13, 'Paralell harp'),
+(14, ' Bass harmonica has the same pitch range.'),
+(15, 'Producing vibrato')
+ON DUPLICATE KEY UPDATE
+answer_3 = VALUES (answer_3);
+
+
+Which brand is widely recognized as one of the most typical and iconic manufacturers of harmonicas in the world?
+a) Yamaha
+b) Fender
+c) Hohner
+d) Gibson
+Correct Answer: c) Hohner
+
+
+INSERT INTO questions (answer_4) VALUES
+(1, 'Piano'),
+(2, 'Wind Instruments'),
+(3, 'Ludwig van Beethoven'),
+(4, '24 reeds'),
+(5, 'Gibson'),
+(6, 'Feet'),
+(7, 'Distorting'),
+(8, 'Tremolo effect'),
+(9, 'Solo playing'),
+(10, 'Jimmy Hendrix'),
+(11, 'Vents'),
+(12, 'Hip-hop'),
+(13, ' Diagonal harp'),
+(14, 'Bass harmonica has a variable pitch range.'),
+(15, 'Redirecting air')
+ON DUPLICATE KEY UPDATE
+answer_4 = VALUES (answer_4);
+
+
+INSERT INTO questions (answer_id) VALUES
+(1, 'Mouth Organ'),
+(2, 'Wind Instruments'),
+(3, 'Christian Friedrich Ludwig Buschmann'),
+(4, '20 reeds'),
+(5, 'Hohner'),
+(6, 'Left hand'),
+(7, 'Bending'),
+(8, 'Slide button'),
+(9, 'Chordal playing'),
+(10, 'Bob Dylan'),
+(11, 'Vents'),
+(12, 'Folk music'),
+(13, 'Cross harp'),
+(14, 'Bass harmonica has a lower pitch range.'),
+(15, 'Redirecting air')
+ON DUPLICATE KEY UPDATE
+answer_id = VALUES (answer_id);
+

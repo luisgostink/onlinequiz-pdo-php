@@ -18,6 +18,7 @@
         <?php include "./include/header.php";?>
 
     <form action="/quiz_questions.php" method="post"> 
+        
         <div class="container">
 
             <div class="row align-items-center">
@@ -52,5 +53,6 @@
 
         </div> 
     </form>
+
 </body>
 </html>
