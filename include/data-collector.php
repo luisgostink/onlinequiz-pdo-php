@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
 
 if (isset($_SESSION['id'])) {
     $id = $_SESSION['id'];
@@ -8,5 +8,6 @@ else {
     $id = 1; 
     $_SESSION['id'] = $id;
 }
+
 
 ?>

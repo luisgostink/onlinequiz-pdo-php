@@ -1,3 +1,5 @@
+<?php session_start(); ?> 
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -23,15 +25,9 @@
         // ------ DATABASE CONNECTION
         include './include/db.php';
 
-    
-        if (isset($_SESSION['id'])) {
-            $id = $_SESSION['id'];
-            $id++;
-        }
-        else {
-            $id = 1; 
-            $_SESSION['id'] = $id;
-        }
+        // ------ DATA COLLECTOR
+        include './include/data-collector.php';
+
 
         // ------ Prepare the SQL query using a prepared statement
         $sqlStatement = $dbConnection->query("SELECT * FROM `questions` WHERE `id`=$id");
@@ -53,21 +49,10 @@
         $answer4 = $questionData['answer_4'];
         $correctAnswer = $questionData['answer_id'];
 
-    
-        // ------ PREVIOUS PROJECT LOOP
-       /*  $rowCount = $sqlStatement->rowCount($id);
+        ?>
 
-       for ($id = 0; $id < $rowCount; $id++){
-            $rowMeta = $sqlStatement->getRowMeta($id);
-            
-            // prettyPrint($rowMeta);
-            
-            $rowName = $rowMeta['question'];
-            echo '<th>$rowName</th>';
 
-        } */
-        
-
+        <?php
         //----- QUESTION TEMPLATE
 
         echo "<div class='row question'>
