@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -19,8 +21,6 @@
 
         // ------ HEADER
          require './include/header.php';
-         require './include/db.php';
-         require './include/tools.php';
          require './include/data-collector.php';
    
 
@@ -33,7 +33,7 @@
         // ------ Fetch the question data
         $questionData = $sqlStatement->fetch(PDO::FETCH_ASSOC);
 
-        // prettyPrint($questionData);
+         prettyPrint($questionData);
 
         $questionID = $questionData['id'];
         $questionText = $questionData['question_text'];
@@ -49,46 +49,51 @@
         <?php
         //----- QUESTION TEMPLATE
 
-        echo "<div class='row question'>
+        echo 
+        
+        "<form action'data-collector.php' method='post' >
+        
+            <div class='row question'>
 
-            <div class='container'>
+                <div class='container'>
 
-                <div class='container d-flex flex-column justify-content-center align-items-center'>
-                    <img class='question-img' src='/img/harmonicalogo_1.png' alt='Harmonica'>    
-                    <h1 class='question-title'>$questionText</h1>
-                </div>
-
-                <div class='container d-flex justify-content-center'>
-
-                    <div class='col-sm-6'>
-                        <label class='d-flex answer-checkbox'><span class='answer-margin'>[A]&nbsp;</span>
-                        <input type='checkbox' id='answer1' name='answer1' value='1' hidden>
-                        <span>$answer1</span></label><br>
-                            
-                        <label class='d-flex answer-checkbox'><span class='answer-margin'>[B]&nbsp;</span>
-                        <input type='checkbox' id='answer2' name='answer2' value='id' hidden>
-                        <span>$answer2</span></label><br>
+                    <div class='container d-flex flex-column justify-content-center align-items-center'>
+                        <img class='question-img' src='/img/harmonicalogo_1.png' alt='Harmonica'>    
+                        <h1 class='question-title'>$questionText</h1>
                     </div>
 
-                    <div class='col-sm-6'>
-                        <label class='d-flex answer-checkbox'><span class='answer-margin'>[C]&nbsp;</span>
-                        <input type='checkbox' id='answer3' name='answer3' value='id' hidden>
-                        <span>$answer3</span></label><br>
+                    <div class='container d-flex justify-content-center'>
 
-                        <label class='d-flex answer-checkbox'><span class='answer-margin'>[D]&nbsp;</span>
-                        <input type='checkbox' id='answer4' name='answer4' value='id' hidden>
-                        <span>$answer4</span></label><br>
+                        <div class='col-sm-6'>
+                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[A]&nbsp;</span>
+                            <input type='checkbox' id='answer1' name='answer1' value='1' hidden>
+                            <span>$answer1</span></label><br>
+                                
+                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[B]&nbsp;</span>
+                            <input type='checkbox' id='answer2' name='answer2' value='id' hidden>
+                            <span>$answer2</span></label><br>
+                        </div>
+
+                        <div class='col-sm-6'>
+                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[C]&nbsp;</span>
+                            <input type='checkbox' id='answer3' name='answer3' value='id' hidden>
+                            <span>$answer3</span></label><br>
+
+                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[D]&nbsp;</span>
+                            <input type='checkbox' id='answer4' name='answer4' value='id' hidden>
+                            <span>$answer4</span></label><br>
+                        </div>
+                    </div>      
+        
+                    <div class='container d-flex justify-content-center btn-container'>
+                                <button type='submit' 
+                                class='button btn btn-success'>NEXT</button>
                     </div>
-                </div>      
-    
-                <div class='container d-flex justify-content-center btn-container'>
-                            <button type='submit' 
-                            class='button btn btn-success'>NEXT</button>
-                </div>
 
-                
+                    
+                </div>
             </div>
-        </div>";
+        </form>";
 
         ?>
 </body>

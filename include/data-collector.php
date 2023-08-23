@@ -1,13 +1,19 @@
 <?php 
+    require './include/db.php';
+    require './include/tools.php';
 
-if (isset($_SESSION['id'])) {
-    $id = $_SESSION['id'];
-    $id++;
-}
-else {
-    $id = 1; 
-    $_SESSION['id'] = $id;
-}
+    // prettyPrint($_POST); 
+
+    // $_SESSION FOR THE WHOLE ARRAY    
+
+    if (isset($_SESSION['id'])) {
+        $id = $_SESSION['id'];
+        $id++;
+    }
+    else {
+        $id = 1; 
+        $_SESSION['id'] = $id;
+    }
 
 
 ?>
