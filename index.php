@@ -18,7 +18,6 @@
         <?php include "./include/header.php";?>
 
     <form action="/quiz_questions.php" method="post"> 
-        
         <div class="container">
 
             <div class="row align-items-center">
@@ -27,9 +26,13 @@
                     <div class="dropdown">
                         <label for="quiz">Choose a quiz:</label>
                         <select name="quiz" id="quiz">
-                            <option value="music">Music</option>
-                            <option value="geography">Geography</option>
-                            <option value="random">Random</option>
+                            <option value="harmonica">Harmonica</option>
+                            <option value="football">Football</option>
+                            <option value="football">Switzerland</option>
+                            <option value="e-guitar">E-Guitar</option>
+                            <option value="maths">Mathematics</option>
+                            <option value="languages">Languages</option>
+                            <option value="anatomy">Anatomy</option>
                         </select>
                     </div>
                 </div>

@@ -71,6 +71,8 @@ body {
 
 .btn-container{
     margin-top: 50px !important;
+    margin:auto;
+    
 }
 
 .question-img{
@@ -82,13 +84,21 @@ body {
     font-size: 50px;
     font-family: 'Bebas Neue', sans-serif;
     color: #ffffff;
-    text-align: center;
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: center !important;
 }
 
-answer-margin{
+.answer-margin{
     margin-right: 20px;
     margin-left: 20px;
 }
+
+/* .answer title{
+    text-align: center;
+    background-color: #FF9900;
+    max-width: fit-content;
+} */
 
 /* [type="checkbox"]:checked + label {
     background: grey;

@@ -1,3 +1,10 @@
+<?php 
+    /*Must be at the very beginning of the main page, 
+    contains start_session();. */
+    require "./include/data-collector-2.php"; 
+    require './include/header.php'; 
+?> 
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -18,30 +25,18 @@
         <?php 
 
         // ------ HEADER
-         require './include/header.php';
-         require './include/db.php';
-         require './include/tools.php';
-         require './include/data-collector.php';
-   
+        // require './include/header.php';
 
-        // ------ Prepare the SQL query using a prepared statement
+        /* Call the list (array) from the question-id-nummber for all the quiz
+            Possible result: [1, 3, 5, 14, 12, etc]
+        */
+        
+        // Take the data of the current question from the Database
+        $questionId = 1;
+        fetchQuestionById($id, $dbConnection);
         $sqlStatement = $dbConnection->query("SELECT * FROM `questions` WHERE `id`=$id");
 
-        // ------ Execute the prepared statement
-        $sqlStatement->execute();
-
-        // ------ Fetch the question data
-        $questionData = $sqlStatement->fetch(PDO::FETCH_ASSOC);
-
-        // prettyPrint($questionData);
-
-        $questionID = $questionData['id'];
-        $questionText = $questionData['question_text'];
-        $answer1 = $questionData['answer_1'];
-        $answer2 = $questionData['answer_2'];
-        $answer3 = $questionData['answer_3'];
-        $answer4 = $questionData['answer_4'];
-        $correctAnswer = $questionData['answer_id'];
+     
 
         ?>
 
