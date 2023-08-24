@@ -47,9 +47,8 @@
 
 
         <?php
+        
         //----- QUESTION TEMPLATE
-
-        echo 
         
         "<form action'data-collector.php' method='post' >
         

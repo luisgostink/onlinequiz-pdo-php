@@ -37,7 +37,6 @@
                     </div>
                 </div>
 
-
                 <div class="col-sm-6">
                     <div class="dropdown">
                         <label for="questions">Number of questions:</label>
@@ -45,8 +44,6 @@
                     </div> 
                 </div>
             </div>
-
-
 
             <div class="container d-flex justify-content-center row btn-container">
                 <button type="submit" 
