@@ -21,19 +21,12 @@
 
         // ------ HEADER
          require './include/header.php';
-         require './include/data-collector.php';
+         require './include/db.php';
+         
+         // require './include/data-collector.php';
    
-
-        // ------ Prepare the SQL query using a prepared statement
-        $sqlStatement = $dbConnection->query("SELECT * FROM `questions` WHERE `id`=$id");
-
-        // ------ Execute the prepared statement
-        $sqlStatement->execute();
-
-        // ------ Fetch the question data
-        $questionData = $sqlStatement->fetch(PDO::FETCH_ASSOC);
-
-         prettyPrint($questionData);
+        $id = 1; 
+        $questionData = fetchQuestionById($id, $dbConnection); 
 
         $questionID = $questionData['id'];
         $questionText = $questionData['question_text'];
@@ -44,13 +37,10 @@
         $correctAnswer = $questionData['answer_id'];
 
         ?>
-
-
-        <?php
         
-        //----- QUESTION TEMPLATE
+        <!----- QUESTION TEMPLATE---->
         
-        "<form action'data-collector.php' method='post' >
+        <form action='./include/data-collector.php' method='post' >
         
             <div class='row question'>
 
@@ -58,29 +48,30 @@
 
                     <div class='container d-flex flex-column justify-content-center align-items-center'>
                         <img class='question-img' src='/img/harmonicalogo_1.png' alt='Harmonica'>    
-                        <h1 class='question-title'>$questionText</h1>
+                        <h1 class='question-title'><?php echo $questionText;?> </h1>
                     </div>
 
                     <div class='container d-flex justify-content-center'>
 
                         <div class='col-sm-6'>
-                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[A]&nbsp;</span>
-                            <input type='checkbox' id='answer1' name='answer1' value='1' hidden>
-                            <span>$answer1</span></label><br>
+                            <input type='radio' id='answer1' name='answer' value='1'>
+                            <label for='answer1' class='d-flex answer-checkbox'><?php echo $answer1;?></label><br>
                                 
-                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[B]&nbsp;</span>
-                            <input type='checkbox' id='answer2' name='answer2' value='id' hidden>
-                            <span>$answer2</span></label><br>
+                            <input type='radio' id='answer2' name='answer' value='2'>
+                            <label for='answer2' class='d-flex answer-checkbox'><?php echo $answer2;?></label>
+                            
                         </div>
 
                         <div class='col-sm-6'>
-                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[C]&nbsp;</span>
-                            <input type='checkbox' id='answer3' name='answer3' value='id' hidden>
-                            <span>$answer3</span></label><br>
+                            <input type='radio' id='answer3' name='answer' value='3'>
+                            <label for='answer3' class='d-flex answer-checkbox'><?php echo $answer3;?></label><br>
 
-                            <label class='d-flex answer-checkbox'><span class='answer-margin'>[D]&nbsp;</span>
-                            <input type='checkbox' id='answer4' name='answer4' value='id' hidden>
-                            <span>$answer4</span></label><br>
+                            <input type='radio' id='answer4' name='answer' value='4'>
+                            <label for='answer4' class='d-flex answer-checkbox'><?php echo $answer4;?></label><br>
+
+                            <input type='text' id='correctAnswer' name='correctAnswer' value='<?php echo $correctAnswer;?>' hidden>
+                            <input type='text' id='questionId' name='questionId' value='<?php echo $questionID;?>' hidden>
+
                         </div>
                     </div>      
         
@@ -92,7 +83,7 @@
                     
                 </div>
             </div>
-        </form>";
+        </form>
 
         ?>
 </body>

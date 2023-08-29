@@ -17,4 +17,7 @@ You work solo as Web Developer and with Trainer guidance. Build the following pa
 # See the output of your project as a prototype development - a perfect or fancy layout is secondary :-)
 # Finish your project at 12:30 of the 24th August. If possible, we will organize a vernissage of the quizzes.
 
+# FIGMA LINK: 
+https://www.figma.com/file/UI7dQoyZDWdm7u76XeVCxg/PROJECTS?type=design&node-id=201-2&mode=design&t=2GdY8SRsqNeujmBR-0
+
 ​

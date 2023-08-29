@@ -1,1 +1,3 @@
 # RETROSPECTIVE 
+I think I started very good at the beginning. I can understand in a better way how the computer logic works. There are a lot of things that could be improved. 
+Personally I think the project was a bit too difficult for the amount ofd time we had, and also I had the problem that I was wprking on my own with Ray mostly, did part of the project at my own way, but then when we looked at Chris example together in the room, many of the things were not making sense. 
